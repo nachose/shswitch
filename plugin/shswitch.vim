@@ -55,7 +55,7 @@ function! g:SHSwitch()
         call add(l:target_file_variants, l:current_file_name . '.' . e)
     endfor
 
-    let l:result = FindFile(expand('%:p:h:h:h'), l:target_file_variants)
+    let l:result = FindFile(expand('%:p:h:h'), l:target_file_variants)
     if l:result == 'None'
         echo "SHSwitch: Can't find relative file"
         return
